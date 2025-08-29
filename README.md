@@ -16,6 +16,7 @@ nmap -sV -O 192.168.1.6
 
 ### Result:
 ![Nmap Scan](./Screenshot%202025-07-22%20154954.png)
+<img width="1153" height="541" alt="Screenshot 2025-07-22 154954" src="https://github.com/user-attachments/assets/1dc8701b-f9d6-41fb-af5d-5471fdbfbc45" />
 
 - FTP (21/tcp) → **vsftpd 2.3.4**
 - SSH (22/tcp) → OpenSSH 4.7p1
@@ -35,6 +36,7 @@ searchsploit vsftpd
 ```
 
 ![Searchsploit Results](./Screenshot%202025-07-22%20155036.png)
+<img width="1569" height="453" alt="Screenshot 2025-07-22 155036" src="https://github.com/user-attachments/assets/d87b0325-9bb5-4a25-861f-a5a934acf2ca" />
 
 - Found exploit: `vsftpd 2.3.4 - Backdoor Command Execution`  
 - Path: `unix/remote/17491.rb`
@@ -47,6 +49,7 @@ search vsftpd
 ```
 
 ![Metasploit Module Search](./Screenshot%202025-07-22%20160110.png)
+<img width="1575" height="551" alt="Screenshot 2025-07-22 160110" src="https://github.com/user-attachments/assets/6bb358ff-d78e-4e06-83ba-7fc28592d613" />
 
 - `exploit/unix/ftp/vsftpd_234_backdoor` → Rank: Excellent
 
@@ -68,6 +71,7 @@ exploit
 ```
 
 ![Metasploit Exploit Execution](./Screenshot%202025-07-22%20160211.png)
+<img width="1238" height="401" alt="Screenshot 2025-07-22 160211" src="https://github.com/user-attachments/assets/028c8de2-caf8-4f1d-ac8b-ca9276cbda45" />
 
 - Exploit triggered successfully.
 - Shell opened as **root**.
@@ -88,6 +92,7 @@ sudo -l
 ```
 
 ![Post Exploitation Root Access](./Screenshot%202025-07-22%20160249.png)
+<img width="1238" height="401" alt="Screenshot 2025-07-22 160211" src="https://github.com/user-attachments/assets/53743b3c-622e-469f-bc60-fec845e22f59" />
 
 - Root privileges confirmed.  
 - Complete control of the system achieved.  
